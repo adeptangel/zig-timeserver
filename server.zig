@@ -22,7 +22,7 @@ fn timeserver() !void {
         var client = try sock.accept();
         defer client.close();
 
-        std.debug.print("Client connected from {}\n", .{try client.getLocalEndPoint(),});
+        std.debug.print("Client connected from {}\n", .{try client.getLocalEndPoint()});
 
         const currentTime: i64 = std.time.timestamp();
         // var nowBuf: [8]u8 = undefined;
