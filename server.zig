@@ -28,6 +28,6 @@ fn timeserver() !void {
         // var nowBuf: [8]u8 = undefined;
         // const now = cTime.strftime(nowBuf, 8, "%H:%M:%S", currentTime);
         
-        _ = try client.send(try std.fmt.allocPrint(alloc, "{}", .{currentTime}));
+        _ = try client.send(try std.fmt.allocPrint(alloc, "{}\n", .{currentTime}));
     }
 }
